@@ -1,0 +1,26 @@
+
+<h1>Kredi Hesaplama Formu</h1>
+
+<div>
+  <label>Kredi Tutari: </label> <!--ng model ile yaklandı-->
+  <input  type="text" [(ngModel)]="krediTutari">
+</div>
+<div>
+  <label>Taksit Tutari:</label>
+  <select #taksitTutari>  <!-- view chil ile yakalandı-->
+    <option >6</option>
+    <option >1</option>
+    <option >12</option>
+  </select>
+</div>
+<div>
+  <button (click)="hesapla()">Hesapla</button> <!-- event binding yapıldı-->
+  <hr> <!-- çizgi çeker-->
+  <div>
+    <h4>Aylik Taksit Tutari: {{aylikTaksitTutari}}</h4>
+  </div>
+</div>
+
+ <router-outlet></router-outlet> 
+
+
